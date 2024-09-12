@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import DrawingView from "./components/pages/DrawingView.jsx";
+import AddDrawing from "./components/pages/AddDrawing.jsx";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/drawings/:id",
     element: <DrawingView />
+  },
+  {
+    path: "/addDrawing",
+    element: <AddDrawing />
   }
 ]);
 

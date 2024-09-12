@@ -7,7 +7,6 @@ import axios from "axios";
 const App = () => {
   const [drawings, refetch] = useDrawing();
   console.log(drawings);
-  
 
   const handleDelete = (drawing) => {
     Swal.fire({
@@ -76,6 +75,11 @@ const App = () => {
           </ul>
         </main>
       </div>
+      <Link to={"/addDrawing"} className="flex justify-center mt-10">
+        <button className="btn btn-primary w-full max-w-4xl mx-auto">
+          Add Drawing
+        </button>
+      </Link>
     </div>
   );
 };
